@@ -256,7 +256,7 @@ function renderProjects() {
       stack: ["Arduino UNO", "HC-SR04 Ultrasonic Sensor", "Servo Motor", "C++", "Embedded Systems"],
       links: [
         { label: "Research Paper", icon: "fa-solid fa-file-lines", href: "#", placeholder: true },
-        { label: "GitHub Repo", icon: "fa-brands fa-github", href: "#", placeholder: true },
+        { label: "GitHub Repo", icon: "fa-brands fa-github", href: "https://github.com/arifuddin1854-svg/aws-s3-portfolio-website", placeholder: false },
       ],
     },
   ];
@@ -348,7 +348,7 @@ function renderCertifications() {
     },
     {
       name: "HTML & CSS Certification",
-      issuer: "Certifying Body Not Specified",
+      issuer: "Frontend Web Development",
       status: "Completed",
       icon: "fa-brands fa-html5",
     },
