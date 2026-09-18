@@ -339,7 +339,7 @@ function renderEducation() {
    11. CERTIFICATIONS — sourced from resume "Certifications" section
    --------------------------------------------------------- */
 function renderCertifications() {
-  const linkedinUrl = "https://linkedin.com";
+  const linkedinUrl = "https://www.linkedin.com/in/syedabdussabur/details/certifications/";
 
   const certs = [
     {
