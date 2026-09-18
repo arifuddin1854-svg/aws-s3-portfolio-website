@@ -339,30 +339,36 @@ function renderEducation() {
    11. CERTIFICATIONS — sourced from resume "Certifications" section
    --------------------------------------------------------- */
 function renderCertifications() {
+  const linkedinUrl = "https://linkedin.com";
+
   const certs = [
     {
       name: "AWS Cloud Practitioner",
       issuer: "Amazon Web Services",
       status: "In Progress",
       icon: "fa-brands fa-aws",
+      link: linkedinUrl,
     },
     {
       name: "HTML & CSS Certification",
       issuer: "Frontend Web Development",
       status: "Completed",
       icon: "fa-brands fa-html5",
+      link: linkedinUrl,
     },
     {
       name: "Python Foundation Certification",
       issuer: "Infosys",
       status: "Completed",
       icon: "fa-brands fa-python",
+      link: linkedinUrl,
     },
     {
       name: "Introduction to Cybersecurity",
       issuer: "Cisco Networking Academy",
       status: "Completed",
       icon: "fa-solid fa-shield-halved",
+      link: linkedinUrl,
     },
   ];
 
@@ -373,7 +379,7 @@ function renderCertifications() {
     .map((c) => {
       const isProgress = c.status === "In Progress";
       return `
-      <div class="cert-card glass fade-in">
+      <a href="${c.link}" target="_blank" rel="noopener" class="cert-card glass fade-in" title="View ${c.name} on LinkedIn">
         <div class="cert-card__top">
           <div class="cert-card__icon"><i class="${c.icon}"></i></div>
           <span class="cert-status ${isProgress ? "cert-status--progress" : "cert-status--done"}">
@@ -382,7 +388,11 @@ function renderCertifications() {
         </div>
         <h3>${c.name}</h3>
         <p>${c.issuer}</p>
-      </div>
+        <div class="cert-card__link">
+          <span><i class="fa-brands fa-linkedin"></i> View on LinkedIn</span>
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </div>
+      </a>
     `;
     })
     .join("");

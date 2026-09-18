@@ -787,10 +787,14 @@ button:focus-visible {
 }
 .cert-card {
   padding: 1.8rem;
-  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), box-shadow 0.3s var(--ease);
   position: relative;
+  cursor: pointer;
 }
-.cert-card:hover { transform: translateY(-5px); border-color: var(--blue); }
+.cert-card:hover { transform: translateY(-5px); border-color: var(--blue); box-shadow: 0 14px 30px -10px rgba(46, 155, 240, 0.25); }
 .cert-card__top {
   display: flex;
   align-items: center;
@@ -815,7 +819,22 @@ button:focus-visible {
 .cert-status--progress { color: #ffc94d; border-color: rgba(255,201,77,0.4); background: rgba(255,201,77,0.08); }
 .cert-status--done { color: #3ddc84; border-color: rgba(61,220,132,0.4); background: rgba(61,220,132,0.08); }
 .cert-card h3 { font-family: var(--font-display); font-size: 1.02rem; margin-bottom: 0.4rem; color: var(--text); }
-.cert-card p { font-size: 0.85rem; color: var(--text-muted); }
+.cert-card p { font-size: 0.85rem; color: var(--text-muted); flex: 1; }
+.cert-card__link {
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--blue);
+  transition: color 0.25s var(--ease);
+}
+.cert-card:hover .cert-card__link {
+  color: var(--orange);
+}
 
 /* =========================================================
    CONTACT
